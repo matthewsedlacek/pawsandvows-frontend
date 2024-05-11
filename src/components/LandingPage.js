@@ -7,7 +7,7 @@ import client3 from '../assets/client3.jpeg';
 
 function LandingPage() {
   return (
-      <div>
+      <div className="carousel" style={{ width: '80%', margin: 'auto' }}>
       <Carousel>
         <div>
           <img src={client1} alt="Client 1" />
