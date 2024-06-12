@@ -31,24 +31,45 @@ const Container = styled.div`
 `;
 
 const Header = styled.header`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background-color: #eae8e3;
-  padding: 40px 20px;
+  padding: 20px 0;
   border-radius: 10px;
   margin: 20px 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+`;
+
+const Nav = styled.nav`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px 10px 0 0;
+`;
+
+const NavLink = styled.a`
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  &:hover {
+    color: #FF69B4;
+  }
 `;
 
 const Logo = styled.img`
-  width: 100px;
+  width: 200px;
   margin-bottom: 20px;
 `;
 
 const Title = styled.h1`
-  color: #A9A9A9;
+  color: #333;
   margin: 0;
+  font-size: 2.5em;
+  font-weight: bold;
 `;
 
 const Description = styled.p`
@@ -91,6 +112,12 @@ function App() {
   return (
     <Container>
       <Header>
+        <Nav>
+          <NavLink href="#home">Home</NavLink>
+          <NavLink href="#services">Services</NavLink>
+          <NavLink href="#about">About</NavLink>
+          <NavLink href="#contact">Contact</NavLink>
+        </Nav>
         <Logo src={logo} alt="Paws and Vows Logo" />
         <Title>Paws and Vows</Title>
         <Description>Wedding day dog care for your furry friends.</Description>
